@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="เว็บไซต์ แนะนำตัว เกี่ยวกับ หาญพล การศึกษา กิจกรรม ผลงาน แฟ้มสะสมผลงาน ติดต่อ วิชาการ">
+    <title>Hanpon Porfolio</title>
+    <link rel="shortcut icon" type="image/x-icon" href="asset/เพชร.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+    <script src="https://kit.fontawesome.com/2b7b7ce177.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script src="config.js"></script>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+        </symbol>
+        <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+        </symbol>
+        <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </symbol>
+    </svg>
+
+</head>
+<body>
+
+    <script>AOS.init();</script>
+
+    <nav>
+        <div class="container-fluid" style="background-color: #020617;">
+            <div class="container" style="padding: 16px 0px;">
+                <div class="row">
+                    <div class="col-2">
+                        <span style="font-size: 24px; font-weight: bold; color: white; cursor: default; user-select: none;">Hanpon</span>
+                        <span style="font-size: 24px; font-weight: bold; color: #EAB308; cursor: default; user-select: none;">.html</span>
+                    </div>
+                    <div class="col-3"></div>
+                    <div class="col-7" style="display: flex; justify-content: space-between; align-items: center;">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#education">Education</a>
+                        <a href="#activities">Activities</a>
+                        <a href="#portfolio">Portfolio</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav-mobile>
+        <div class="container-fluid" style="background-color: #020617;">
+            <div class="container" style="padding: 16px 0px;">
+                <div class="row">
+                    <div class="col-12 " style="display: flex; justify-content: center;">
+                        <span style="font-size: 24px; font-weight: bold; color: white; cursor: default; user-select: none;">Hanpon</span>
+                        <span style="font-size: 24px; font-weight: bold; color: #EAB308; cursor: default; user-select: none;">.html</span>
+                    </div>
+                    <div class="col-12 bar" style="text-align: center;">
+                        <i class="fa-solid fa-bars" style="color: white; font-size: 22px; padding-top: 16px;"></i>
+                        <div class="menu">
+                            <div><a href="#home">Home</a></div>
+                            <div><a href="#about">About</a></div>
+                            <div><a href="#education">Education</a></div>
+                            <div><a href="#activities">Activities</a></div>
+                            <div><a href="#portfolio">Portfolio</a></div>
+                            <div><a href="#contact">Contact</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav-mobile>
+
+    <home id="home">
+        <div class="container-fluid" style="background-color: #111827;">
+            <div class="container home" style="padding: 96px 15px;">
+                <div class="row">
+                    <div class="col-lg-5" style="padding: 56px 0px;" data-aos="fade-right">
+                        <p style="color: #EAB308; font-size: 16px;">สวัสดีครับ, ผมชื่อ....</p>
+                        <p style="color: #F3F4F6; font-size: 42px; font-weight: bold;">นายหาญพล พรหมสมบัติ</p>
+                        <p style="font-size: 16px; color: #6B7280; padding-bottom: 15px;">
+                            นักเรียนโครงการห้องเรียนพิเศษ SMTE<br>
+                            ชั้นมัธยมศึกษาปีที่ 6 โรงเรียนมหาวชิราวุธ จังหวัดสงขลา<br>
+                            ปีการศึกษา 2566
+                        </p>
+                        <a href="#contact" class="btn btn-primary" style="color: black; font-size: 16px;">ติดต่อที่นี่</a>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-5" style="display: flex; justify-content: center;" data-aos="fade-left">
+                        <img alt="หาญพล พรหมสมบัติ" class="profile" src="asset/profile.jpg"  style="border-radius: 24px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </home>
+
+    <about id="about">
+        <div class="container-fluid" style="background-color: #020617;">
+            <div class="container about" style="padding: 96px 15px;">
+                <div class="row">
+
+                    <div class="col-lg-6 about-text-mobile" style="padding: 82px 0px;" data-aos="fade-right">
+                        <span style="font-size: 42px; font-weight: bold; color: #EAB308;">About  </span>
+                        <span style="font-size: 42px; font-weight: bold; color: white;">Me</span>
+                        <p style="font-size: 16px; color: #6B7280; padding-top: 18px; padding-bottom: 18px;">
+                            ผมได้เข้าร่วมการแข่งขันโครงงานในรายการต่าง ๆ ในระดับชาติ เช่น High-school Talent Project Competition 2023
+                            จุฬาลงกรณ์มหาวิทยาลัย และร่วมกิจกรรมค่ายต่าง ๆ เช่น ค่าย สอวน.คอมพิวเตอร์ ค่าย 1 , ITCamp 19 (สจล.)
+                            และ Thai Science Camp 15 (อพวช.)
+                        </p>
+                        <p style="font-size: 16px; color: #6B7280;">
+                            เพือสั่งสมความรู้ และประสบการณ์ สู่การศึกษาต่อในคณะวิศวกรรมศาสตร์ สาขาวิศวกรรมศาสตร์
+                            จุฬาลงกรณ์มหาวิทยาลัย
+                        </p>
+                        <a href="#contact" class="btn btn-primary" style="color: black; font-size: 16px; margin-top: 18px;">ติดต่อที่นี่</a>
+                    </div>
+
+                    <div class="col-lg-6 img" data-aos="fade-left">
+                        <img alt="หาญพล พรหมสมบัติ" src="asset/about.jpg" style="border-radius: 24px;">
+                    </div>
+
+                    <div class="col-lg-6 about-text-com" style="padding: 82px 0px;" data-aos="fade-right">
+                        <span style="font-size: 42px; font-weight: bold; color: #EAB308;">About</span>
+                        <span style="font-size: 42px; font-weight: bold; color: white;"> Me</span>
+                        <p style="font-size: 16px; color: #6B7280; padding-top: 18px; padding-bottom: 18px;">
+                            ผมได้เข้าร่วมการแข่งขันโครงงานในรายการต่าง ๆ ในระดับชาติ เช่น High-school Talent Project Competition 2023
+                            จุฬาลงกรณ์มหาวิทยาลัย และเข้าร่วมกิจกรรมค่ายต่าง ๆ เช่น ค่าย สอวน.คอมพิวเตอร์ ค่าย 1 , ITCamp 19 (สจล.)
+                            และ Thai Science Camp 15 (อพวช.)
+                        </p>
+                        <p style="font-size: 16px; color: #6B7280;">
+                            เพือสั่งสมความรู้ และประสบการณ์ สู่การศึกษาต่อในคณะวิศวกรรมศาสตร์ สาขาวิศวกรรมศาสตร์
+                            จุฬาลงกรณ์มหาวิทยาลัย
+                        </p>
+                        <a href="#contact" class="btn btn-primary" style="color: black; font-size: 16px; margin-top: 18px;">ติดต่อที่นี่</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </about>
+
+    <education id="education">
+        <div class="container-fluid" style="background-color: #111827;">
+            <div class="container education" style="padding: 96px 15px 20px 15px;">
+                <div class="row" style="justify-content: center;">
+                    <div class="col-12" data-aos="fade-up">
+                        <span style="font-size: 42px; font-weight: bold; color: #EAB308;">My </span>
+                        <span style="font-size: 42px; font-weight: bold; color: white;">Education</span>
+                        <p style="font-size: 16px; color: #6B7280; padding-bottom: 50px; padding-top: 10px;">
+                            ผลการศึกษาตั้งแต่ระดับชั้น ประถมศึกษาปีที่ 4 - มัธมศึกษาปี่ที่ 6
+                        </p>
+                    </div>
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="อนุบาลสงขลา" src="data:image/png;base64,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" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 10px;">ระดับชั้น ป.4 - ป.6</p>
+                            <h5 class="card-title">โรงเรียนอนุบาลสงขลา</h5>
+                            <p class="card-text">โครงการห้องเรียนพิเศษ SMT</p>
+                            <p class="btn btn-primary" style="cursor: default;">เกรดเฉลี่ย 3.82</p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="มหาวชิราวุธ" src="asset/mvsk.gif" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 10px;">ระดับชั้น ม.1 - ม.3</p>
+                            <h5 class="card-title">โรงเรียนมหาวชิราวุธ<br>จังหวัดสงขลา</h5>
+                            <p class="card-text">โครงการห้องเรียนพิเศษ SMA</p>
+                            <p class="btn btn-primary" style="cursor: default;">เกรดเฉลี่ย 3.82</p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="มหาวชิราวุธ" src="asset/mvsk.gif" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 10px;">ระดับชั้น ม.4 - ม.6</p>
+                            <h5 class="card-title">โรงเรียนมหาวชิราวุธ<br>จังหวัดสงขลา</h5>
+                            <p class="card-text">โครงการห้องเรียนพิเศษ SMTE</p>
+                            <p class="btn btn-primary" style="cursor: default;">เกรดเฉลี่ย 3.99 (5 ภาคเรียน)</p>
+                        </div>
+                    </div>
+                    <div class="col-1 col-sm-1"></div>
+                </div>
+            </div>
+        </div>
+    </education>
+
+    <activities id="activities">
+        <div class="container-fluid" style="background-color: #020617;">
+            <div class="container activities" style="padding: 96px 15px">
+                <div class="row" style="justify-content: center;">
+
+                    <div class="col-12" data-aos="fade-up">
+                        <span style="font-size: 42px; font-weight: bold; color: #EAB308;">My </span>
+                        <span style="font-size: 42px; font-weight: bold; color: white;">Activities</span>
+                        <p style="font-size: 16px; color: #6B7280; padding-bottom: 50px; padding-top: 10px;">
+                            กิจกรรม และการแข่งขันที่ได้เข้าร่วมระหว่างชั้น มัธมศึกษาปีที่ 4 - มัธมศึกษาปีที่ 6
+                        </p>
+                    </div>
+
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="ฟิสิกส์สัปประยุทธ์" src="/activity/iypt/รับรางวัลฟิสิกส์สัปทีม.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">การแข่งขันฟิสิกส์สัปประยุทธ์<br>ระดับชาติ</h5>
+                            <p class="card-text">กระทรวงศึกษาธิการ</p>
+                            <p class="btn btn-primary" style="cursor: default;">อ่านเพิ่มเติม...</p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="จุฬาลงกรณ์มหาวิทยาลัย" src="/activity/chu/รับรางวัลจุฬา.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">High-school Talent Project Competition 2023</h5>
+                            <p class="card-text">จุฬาลงกรณ์มหาวิทยาลัย</p>
+                            <p class="btn btn-primary" style="cursor: default;">อ่านเพิ่มเติม...</p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="จุฬาลงกรณ์มหาวิทยาลัย" src="/activity/envi/รับรางวัลEnvi.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">การแข่งขัน EnviMission 4<br>ภารกิจรักษ์สิ่งแวดล้อม ปีที่ 4</h5>
+                            <p class="card-text">จุฬาลงกรณ์มหาวิทยาลัย</p>
+                            <p class="btn btn-primary" style="cursor: default;">อ่านเพิ่มเติม...</p>
+                        </div>
+                    </div>
+                    <div class="col-1 col-sm-1"></div>
+
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="สอวน." src="/activity/posn/สอวน..jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">ค่ายสอวน.คอมพิวเตอร์ ค่าย 1</h5>
+                            <p class="card-text">มหาลัยสงขลานครินทร์</p>
+                            <p class="btn btn-primary" style="cursor: default;">อ่านเพิ่มเติม...</p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="ลาดกระบัง" src="/activity/ITCamp19/GetCerITCamp.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">ค่าย IT Camp 19</h5>
+                            <p class="card-text">สถาบันเทคโนโลยีพระจอมเกล้า<br>เจ้าคุณทหารลาดกระบัง</p>
+                            <p class="btn btn-primary" style="cursor: default;">อ่านเพิ่มเติม...</p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="ศิลปหัตถกรรม" src="/activity/หัตถกรรม/แข่งหัตถกรรมภาค.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">แข่งขันโครงงานวิทยาศาสตร์<br>ศิลปหัตถกรรมครั้งที่ 70</h5>
+                            <p class="card-text" style="font-size: 15px;">สำนักงานคณะกรรมการการศึกษาขั้นพื้นฐาน</p>
+                            <p class="btn btn-primary" style="cursor: default;">อ่านเพิ่มเติม...</p>
+                        </div>
+                    </div>
+                    <div class="col-1 col-sm-1"></div>
+
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="มหาลัยสงขลานครินทร์" src="/activity/psu/พัฒนาเกมมอ.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">การแข่งขันพัฒนาเกม<br>ด้วยโปรแกรมเชิงทัศน์</h5>
+                            <p class="card-text">มหาลัยสงขลานครินทร์</p>
+                            <p class="btn btn-primary" style="cursor: default;">อ่านเพิ่มเติม...</p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="มหาลัยทักษิณ" src="/activity/tu/แข่งโครงงานมอทักษิณ.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">การแข่งขันโครงงานสิ่งประดิษฐ์<br>สัปดาห์วิทยาศาสตร์แห่งชาติ</h5>
+                            <p class="card-text">มหาลัยทักษิณ วิทยาเขตพัทลุง</p>
+                            <p class="btn btn-primary" style="cursor: default;">อ่านเพิ่มเติม...</p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="TechEducation" src="/activity/Tech/TechEd ประเทศ.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">แข่งขันความถนัดด้านทักษะนวัตกรรม ทางวิทยาศาสตร์ ระดับประเทศ</h5>
+                            <p class="card-text">TechEducation</p>
+                            <p class="btn btn-primary" style="cursor: default;">อ่านเพิ่มเติม...</p>
+                        </div>
+                    </div>
+                    <div class="col-1 col-sm-1"></div>
+
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="Thai Science Camp" src="/activity/TSC15/activity3.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">ค่าย Thai Science Camp 15</h5>
+                            <p class="card-text">อพวช. สพฐ. และ สมาคมวิทยาศาสตร์แห่งประเทศไทย</p>
+                            <p class="btn btn-primary" style="cursor: default;">อ่านเพิ่มเติม...</p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="MOSCAMP" alt="" src="/activity/mos/แข่ง mos.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">MOSCAMP Songkhla</h5>
+                            <p class="card-text">Microsoft</p>
+                            <p class="btn btn-primary" style="cursor: default;">อ่านเพิ่มเติม...</p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="โรงเรียนมหาวชิราวุธ" src="/activity/mv/เป็นวิทยากร.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">วิทยาการในงาน OpenHouse </h5>
+                            <p class="card-text">ณ โรงเรียนมหาวชิราวุธ <br> จังหวัดสงขลา</p>
+                            <p class="btn btn-primary" style="cursor: default;">อ่านเพิ่มเติม...</p>
+                        </div>
+                    </div>
+                    <div class="col-1 col-sm-1"></div>
+
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="วัดไทรงาม" src="/activity/งานวัด/ยุวพุทายาท.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">ปฏิบัติจิตอาสา<br>ในโครงการต่าง ๆ ทางศาสนา</h5>
+                            <p class="card-text">วัดไทรงาม และ โรงเรียนดาวนายร้อย</p>
+                            <p class="btn btn-primary" style="cursor: default;">อ่านเพิ่มเติม...</p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="ชมรมอนุรักษ์ป่าชายเลน" src="/activity/ปลูกป่า/ปลูกต้นไม้.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">กิจกรรมจิตอาสาปลูกป่าชายเลนและปล่อยลูกปูม้า</h5>
+                            <p class="card-text">ณ ชมรมอนุรักษ์ป่าชายเลน</p>
+                            <p class="btn btn-primary" style="cursor: default;">อ่านเพิ่มเติม...</p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="col-8 col-sm-6 col-lg-3 card" style="margin-bottom: 85px;" data-aos="fade-up">
+                        <img alt="GTC" src="/activity/GTC/cer.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">GTC : web design skills <br> for university applicants </h5>
+                            <p class="card-text">global technology club สจล.</p>
+                            <p class="btn btn-primary" style="cursor: default;">อ่านเพิ่มเติม...</p>
+                        </div>
+                    </div>
+                    <div class="col-1 col-sm-1"></div>
+
+                </div>
+            </div>
+        </div>
+    </activities>
+
+    <portfolio id="portfolio">
+        <div class="container-fluid" style="background-color: #111827;">
+            <div class="container portfolio" style="padding: 96px 15px;" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-12" style="text-align: center; padding-bottom: 0px;">
+                        <span style="font-size: 42px; font-weight: bold; color: #EAB308;">My </span>
+                        <span style="font-size: 42px; font-weight: bold; color: white;">Portfolio</span>
+                        <p style="font-size: 16px; color: #6B7280; padding-bottom: 40px; padding-top: 10px;">
+                            แฟ้มสะสมผลงานคณะวิศวกรรมศาสตร์ สาขาวิศวกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย
+                        </p>
+                    </div>
+                    <div class="col-12" style="display: flex; justify-content: center;">
+                        <iframe title="แฟ้มสะสมผลงานของหาญพล" loading="lazy" src="https://drive.google.com/file/d/1IvNCuOyGJJT4K323_4nZfERD56LG9P0F/preview" style="width: 580px; aspect-ratio: 1/1.4;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </portfolio>
+
+    <contact id="contact">
+        <div class="container-fluid" style="background-color: #020617;">
+            <div class="container contact" style="padding: 96px 15px;" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-12" style="text-align: center; padding-bottom: 0px;">
+                        <span style="font-size: 42px; font-weight: bold; color: #EAB308;">Contact </span>
+                        <span style="font-size: 42px; font-weight: bold; color: white;">Me</span>
+                        <p style="font-size: 16px; color: #6B7280; padding-bottom: 40px; padding-top: 10px;">
+                            สามารถติดต่อผมได้ทุกช่องต่อไปนี้ หรือสามารถส่งความตรงได้ข้างล่างนี้
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p style="font-size: 18px; color: #EAB308; font-weight: bold;">ช่องทางการติดต่อ</p>
+                        <div style="display: flex;">
+                            <p style="font-size: 16px; color: #EAB308; font-weight: bold;"><i class="fa-solid fa-location-dot" style="font-size: 16px; color: #EAB308; vertical-align:baseline;"></i>&nbsp;Address : </p>
+                            <p style="font-size: 16px; color: white;">&nbsp;26/177 ม.5 ต.เขารูปช้าง อ.เมือง จังหวัดสงขลา</p>
+                        </div>
+                        <a href="mailto:hanpon.petch@gmail.com" style="display: flex;">
+                            <p style="font-size: 16px; color: #EAB308; font-weight: bold;"><i class="fa-solid fa-envelope" style="font-size: 16px; color: #EAB308; vertical-align:baseline;"></i>&nbsp;Email : </p>
+                            <p style="font-size: 16px; color: white;">&nbsp;hanpon.petch@gmail.com</p>
+                        </a>
+                        <a href="tel:+66936901973" style="display: flex;">
+                            <p style="font-size: 16px; color: #EAB308; font-weight: bold;"><i class="fa-solid fa-phone" style="font-size: 16px; color: #EAB308; vertical-align:baseline;"></i>&nbsp;Tel : </p>
+                            <p style="font-size: 16px; color: white;">&nbsp;+66936901973</p>
+                        </a>
+                        <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fline.me%2Fti%2Fp%2FnIWpRKzaay%3Ffbclid%3DIwAR2OBYmEPPJu5J54R3ZJxgTw2txV8kA0O04i2EsohDNGEKVTor-wpF72CZM&h=AT3PWXhhndaw_HBXgLcZGsRvEqSEhwYBsQdRc27o1nexwXqK-d1OPbFLM0ndntgTXPOeChUnFcrq6addQF2E8Vcr9bf-rDLigYrFUS0m-j-UL12H7Z0_F367HWArGFo3bbkhmAtvevhLyU-8HaqZMw" style="display: flex;">
+                            <p style="font-size: 16px; color: #EAB308; font-weight: bold;"><i class="fa-brands fa-line" style="font-size: 16px; color: #EAB308; vertical-align:baseline;"></i>&nbsp;Line : </p>
+                            <p style="font-size: 16px; color: white;">&nbsp;0937531118</p>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100024313590641" style="display: flex;">
+                            <p style="font-size: 16px; color: #EAB308; font-weight: bold;"><i class="fa-brands fa-facebook" style="font-size: 16px; color: #EAB308; vertical-align:baseline;"></i>&nbsp;Facebook : </p>
+                            <p style="font-size: 16px; color: white;">&nbsp;หาญพล พรหมสมบัติ</p>
+                        </a>
+                        <a href="https://www.instagram.com/hanpon_/" style="display: flex;">
+                            <p style="font-size: 16px; color: #EAB308; font-weight: bold;"><i class="fa-brands fa-instagram" style="font-size: 16px; color: #EAB308; vertical-align:baseline;"></i>&nbsp;Instagram : </p>
+                            <p style="font-size: 16px; color: white;">&nbsp;hanpon_</p>
+                        </a>
+                    </div>
+                    <div class="col-0 col-lg-2"></div>
+                    <div class="col-lg-6 ">
+                        <form>
+                            <input id="name" type="text" placeholder="Name Or Email For Contact Back" style="width: 350px; height: 63px; background-color: #1F2937; color: white; border: 0px; padding: 27px 0px 27px 18px; margin-bottom: 32px;">
+                            <textarea id="message" type="text" placeholder="Message" style="height: 166px; background-color: #1F2937; color: white; border: 0px; padding: 27px 0px 27px 18px; margin-bottom: 32px;"></textarea>
+                            <br><div onclick='send()' class="btn btn-primary" style="padding:  24px 20px; color: #020617;">Contact Me</d>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </contact>
+
+    <script>
+        function send(){
+            var name = document.getElementById('name');
+            var message = document.getElementById('message');
+            showCustomAlert();
+            db.collection("message").add({
+                name: name.value,
+                message: message.value
+            })
+            name.value = '';
+            message.value = '';
+        }
+    </script>
+
+    <alert>
+        <div class="container">
+            <div class="row" style="justify-content: center;">
+                <div id="alert" class="col-12 alert alert-success align-items-center" role="alert">
+                    <p onclick="closeCustomAlert()" style="position: relative; left:360px; bottom: 15px; cursor:pointer; user-select: none;">x</p>
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                    <div style="cursor: default; user-select: none;">
+                        ส่งข้อความสำเร็จ เราจะติดต่อกลับไปหากต้องการ
+                    </div>
+                </div>
+            </div>
+        </div>
+    </alert>
+
+    <script>
+        document.querySelector('.alert').style.display='none';
+        document.querySelector('.alert').classList.remove('show');
+        function showCustomAlert() {
+            document.querySelector('.alert').style.display='flex';
+            document.querySelector('.alert').classList.add('show');
+        }
+
+        function closeCustomAlert() {
+            document.querySelector('.alert').style.display='none';
+            document.querySelector('.alert').classList.remove('show');
+        }
+    </script>
+
+    <coppyright>
+        <div class="container-fluid" style="background-color: #020617;">
+            <div class="container" style="padding: 56px 0px;">
+                <div class="row" style="text-align: center;">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <p style="font-size: 40px; color: white; font-weight: bold;">Hanpon.html</p>
+                        <p style="font-size: 16px; color: #9CA3AF;">Copyright &copy; 2023 HANPON PHROMSOMBUT All rights reserved.</p>
+                        <div class="container" style="display: flex; justify-content: center;">
+                            <div class="col-7 col-sm-6 col-md-5 col-lg-4 col-xl-3 col-xxl-2" style="display: flex; justify-content: space-between;">
+                            <a aria-label="คลิ๊กที่นี่เพื่อโทรหาหาญพล" href="tel:+66936901973" ><i class="fa-solid fa-phone"></i></a>
+                            <a aria-label="คลิ๊กที่นี่เพื่อไปยังไลน์ของหาญพล" href="https://l.facebook.com/l.php?u=https%3A%2F%2Fline.me%2Fti%2Fp%2FnIWpRKzaay%3Ffbclid%3DIwAR2OBYmEPPJu5J54R3ZJxgTw2txV8kA0O04i2EsohDNGEKVTor-wpF72CZM&h=AT3PWXhhndaw_HBXgLcZGsRvEqSEhwYBsQdRc27o1nexwXqK-d1OPbFLM0ndntgTXPOeChUnFcrq6addQF2E8Vcr9bf-rDLigYrFUS0m-j-UL12H7Z0_F367HWArGFo3bbkhmAtvevhLyU-8HaqZMw"><i class="fa-brands fa-line"></i></a>
+                            <a aria-label="คลิ๊กที่นี่เพื่อไปยังเฟสบุ๊คของหาญพล" href="https://www.facebook.com/profile.php?id=100024313590641"><i class="fa-brands fa-facebook"></i></a>
+                            <a aria-label="คลิ๊กที่นี่เพื่อไปยังอินสตราแกรมของหาญพล" href="https://www.instagram.com/hanpon_/"><i class="fa-brands fa-instagram"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            </div>
+        </div>
+    </coppyright>
+
+</body>
+</html>

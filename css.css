@@ -1,0 +1,220 @@
+body{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.card{
+    padding: 0px 0px;
+    cursor: default;
+    user-select: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: #9CA3AF;
+}
+
+nav a:hover{
+    color: white;
+    transition: 0.4s;
+}
+
+nav-mobile{
+    display: none;
+}
+
+nav-mobile .menu div{
+    padding-top: 16px;
+}
+
+nav-mobile .menu a{
+    text-decoration: none;
+    color: #9CA3AF;
+    font-size: 16px;
+}
+
+nav-mobile .menu a:hover{
+    color: white;
+    transition: 0.4s;
+}
+
+home .profile{
+    width: 427px; 
+    height: 427px;
+}
+
+home .btn{
+    background-color: #EAB308;
+    border-color: #EAB308;
+}
+
+home .btn:hover{
+    background-color: #e5ca79;
+    border-color: #e5ca79;
+    transition: 0.4s;
+}
+
+home .btn:active{
+    background-color: #EAB308;
+    border-color: #EAB308;
+    transition: 0.1s;
+}
+
+about img{
+    width: 427px;
+    height: 427px;
+}
+
+about .img{
+    display: block;
+    justify-content: center;
+}
+
+about .about-text-mobile{
+    display: none;
+}
+
+about .btn{
+    background-color: #EAB308;
+    border-color: #EAB308;
+}
+
+about .btn:hover{
+    background-color: #e5ca79;
+    border-color: #e5ca79;
+    transition: 0.4s;
+}
+
+about .btn:active{
+    background-color: #EAB308;
+    border-color: #EAB308;
+    transition: 0.1s;
+}
+
+education .card:hover{
+    scale: 110%;
+    transition: 0.6s;
+}
+
+activities .card:hover{
+    scale: 110%;
+    transition: 0.6s;
+}
+
+contact a{
+    text-decoration: none;
+}
+
+contact a:hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: 1.5px;
+}
+
+contact input::placeholder{
+    color: #9CA3AF;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+contact textarea{
+    width: 540px;
+}
+
+contact textarea::placeholder{
+    color: #9CA3AF;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+contact .btn{
+    background-color: #EAB308;
+    border-color: #EAB308;
+}
+
+contact .btn:hover{
+    background-color: #e5ca79;
+    border-color: #e5ca79;
+    transition: 0.4s;
+}
+
+contact .btn:active{
+    background-color: #EAB308;
+    border-color: #EAB308;
+    transition: 0.1s;
+}
+
+.alert{
+    position: fixed;
+    top:1%;
+    width: 400px;
+    height: 80px;
+}
+
+coppyright a{
+    font-size: 25px;
+    color: #EAB308;
+}
+
+coppyright a:hover{
+    color: #e5ca79;
+    transition: 0.3s;
+}
+
+coppyright a:active{
+    color: #EAB308;
+    transition: 0.1s;
+}
+
+
+/* สำหรับหน้า nav bar*/
+@media screen and (max-width:1200px) {
+    nav{
+        display: none;
+    }
+
+    nav-mobile{
+        display: block;
+    }
+
+    nav-mobile .menu{
+        display: none;
+    }
+    
+    nav-mobile .bar:hover .menu{
+        display: block;
+    }
+}
+
+/* สำหรับหน้า home*/
+@media screen and (max-width:480px) {
+    home .profile{
+        width: 300px;
+        height: 300px;
+    }
+    about img{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* สำหรับหน้า about*/
+@media screen and (max-width:992px) {
+    about .about-text-com{
+        display: none;
+    }
+    about .about-text-mobile{
+        display: block;
+    }
+
+    about .img{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* สำหรับหน้า contact*/
+@media screen and (max-width:1140px) {
+    contact textarea{
+        width: 350px;
+    }
+}
